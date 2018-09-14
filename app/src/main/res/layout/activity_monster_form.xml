@@ -57,8 +57,7 @@
         app:srcCompat="@drawable/fire_habitat_8"
         tools:ignore="ContentDescription" />
 
-<<<<<<< HEAD
-=======
+
     <ImageView
         android:id="@+id/fire_lion_visual"
         android:layout_width="wrap_content"
@@ -350,6 +349,4 @@
         app:srcCompat="@drawable/bte_fire" />
 
 
-
->>>>>>> 5bcee89b361e4b6410c3a328f162c73d217c7bda
 </android.support.constraint.ConstraintLayout>
