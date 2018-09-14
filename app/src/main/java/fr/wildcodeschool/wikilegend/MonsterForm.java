@@ -7,7 +7,9 @@ import android.graphics.Paint;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
 import android.view.View;
+
 
 public class MonsterForm extends AppCompatActivity {
 
@@ -16,9 +18,11 @@ public class MonsterForm extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monster_form);
 
+
         ViewPager viewPager = findViewById(R.id.viewPager);
         ImageAdapter adapter = new ImageAdapter(this);
         viewPager.setAdapter(adapter);
+
 
     }
 

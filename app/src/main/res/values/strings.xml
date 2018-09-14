@@ -1,7 +1,16 @@
 <resources>
 
-    <!--General-->
+    <!--Menu-->
     <string name="app_name">WikiLegend</string>
+    <string name="textFireLion">Fire Lion</string>
+    <string name="textLightSpirit">Light Spirit</string>
+    <string name="textTurtle">Turtle</string>
+    <string name="textPanda">Panda</string>
+    <string name="textThunderEagle">Thunder Eagle</string>
+    <string name="textRockilla">Rockilla</string>
+    <string name="textMetalsaur">Metalsaur</string>
+    <string name="textGenie">Genie</string>
+    <string name="textTyrannoking">Tyrannoking</string>
 
     <!--MonsterForm-->
 
@@ -36,11 +45,5 @@
     <string name="fire_lion_3_speed">100</string>
     <string name="fire_lion_3_power">100</string>
     <string name="fire_lion_3_stamina">100</string>
-
-
-
-
-
-
 
 </resources>
