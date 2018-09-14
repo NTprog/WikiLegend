@@ -111,7 +111,6 @@
         android:layout_marginBottom="150dp"
         android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp"
-        android:font="@font/oswald_bold"
         android:text="@string/fire_lion_name"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -124,7 +123,6 @@
         android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="68dp"
-        android:font="@font/oswald_bold"
         android:text="@string/fire_lion_1_level"
         android:textColor="@color/colorWhite"
         android:textSize="23sp"
@@ -163,7 +161,6 @@
         android:layout_height="wrap_content"
         android:text="@string/text_life"
         android:gravity="center"
-        android:font="@font/oswald_bold"
         app:layout_constraintBottom_toBottomOf="@+id/container_life"
         app:layout_constraintEnd_toEndOf="@+id/container_life"
         app:layout_constraintStart_toStartOf="@+id/container_life" />
@@ -175,7 +172,6 @@
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:layout_marginTop="8dp"
-        android:font="@font/oswald_bold"
         android:text="@string/fire_lion_1_life"
         app:layout_constraintEnd_toEndOf="@+id/container_life"
         app:layout_constraintTop_toTopOf="@+id/container_life" />
@@ -211,7 +207,6 @@
         android:id="@+id/text_speed"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:font="@font/oswald_bold"
         android:gravity="center"
         android:text="@string/text_speed"
         app:layout_constraintBottom_toBottomOf="@+id/container_speed"
@@ -226,7 +221,6 @@
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:layout_marginTop="8dp"
-        android:font="@font/oswald_bold"
         android:text="@string/fire_lion_1_speed"
         app:layout_constraintEnd_toEndOf="@+id/container_speed"
         app:layout_constraintTop_toTopOf="@+id/container_speed" />
@@ -262,7 +256,6 @@
         android:id="@+id/text_power"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:font="@font/oswald_bold"
         android:gravity="center"
         android:text="@string/text_power"
         app:layout_constraintBottom_toBottomOf="@+id/container_power"
@@ -277,7 +270,6 @@
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:layout_marginTop="8dp"
-        android:font="@font/oswald_bold"
         android:text="@string/fire_lion_1_power"
         app:layout_constraintEnd_toEndOf="@+id/container_power"
         app:layout_constraintTop_toTopOf="@+id/container_power" />
@@ -314,7 +306,6 @@
         android:id="@+id/text_stamina"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:font="@font/oswald_bold"
         android:gravity="center"
         android:text="@string/text_stamina"
         app:layout_constraintBottom_toBottomOf="@+id/container_stamina"
@@ -329,7 +320,6 @@
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:layout_marginTop="8dp"
-        android:font="@font/oswald_bold"
         android:text="@string/fire_lion_1_stamina"
         app:layout_constraintEnd_toEndOf="@+id/container_stamina"
         app:layout_constraintTop_toTopOf="@+id/container_stamina" />
@@ -356,10 +346,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/bte_fire" />
-
-
-
-
 
 
 
