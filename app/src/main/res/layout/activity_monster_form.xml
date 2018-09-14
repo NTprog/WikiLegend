@@ -44,47 +44,39 @@
 
 
     <!--CENTRAL VISUAL-->
-
     <ImageView
         android:id="@+id/fire_habitat"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="42dp"
-        app:layout_constraintEnd_toEndOf="@+id/fire_lion_visual"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/fire_lion_visual"
-        app:layout_constraintTop_toTopOf="@+id/fire_lion_visual"
-        app:srcCompat="@drawable/fire_habitat_8"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
-        android:id="@+id/fire_lion_visual"
-        android:layout_width="wrap_content"
-        android:layout_height="193dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:contentDescription="@string/des_monster"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:srcCompat="@drawable/fire_lion_1" />
+        app:layout_constraintEnd_toEndOf="@+id/myCircleView"
+        app:layout_constraintStart_toStartOf="@+id/myCircleView"
+        app:layout_constraintTop_toTopOf="@+id/myCircleView"
+        app:srcCompat="@drawable/fire_habitat_8"
+        tools:ignore="ContentDescription" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        app:layout_constraintEnd_toEndOf="@+id/fire_habitat"
+        app:layout_constraintStart_toStartOf="@+id/myCircleView"
+        app:layout_constraintTop_toBottomOf="@+id/logo"></android.support.v4.view.ViewPager>
 
     <ImageButton
         android:id="@+id/arrow_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="100dp"
         android:contentDescription="@string/des_arrow_right"
-        app:layout_constraintBottom_toBottomOf="@+id/fire_lion_visual"
-        app:layout_constraintStart_toEndOf="@+id/fire_lion_visual"
-        app:layout_constraintTop_toTopOf="@+id/fire_lion_visual"
+        app:layout_constraintBottom_toBottomOf="@+id/myCircleView"
+        app:layout_constraintEnd_toEndOf="@+id/myCircleView"
+        app:layout_constraintTop_toTopOf="@+id/myCircleView"
         app:srcCompat="@drawable/ic_keyboard_arrow_right_black_24dp" />
 
     <ImageButton
@@ -92,13 +84,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="100dp"
         android:contentDescription="@string/des_arrow_left"
-        app:layout_constraintBottom_toBottomOf="@+id/fire_lion_visual"
-        app:layout_constraintEnd_toStartOf="@+id/fire_lion_visual"
-        app:layout_constraintTop_toTopOf="@+id/fire_lion_visual"
+        app:layout_constraintBottom_toBottomOf="@+id/myCircleView"
+        app:layout_constraintStart_toStartOf="@+id/myCircleView"
+        app:layout_constraintTop_toTopOf="@+id/myCircleView"
         app:srcCompat="@drawable/ic_keyboard_arrow_left_black_24dp" />
 
 
@@ -120,14 +109,14 @@
         android:id="@+id/monster_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="68dp"
         android:text="@string/fire_lion_1_level"
         android:textColor="@color/colorWhite"
         android:textSize="23sp"
-        app:layout_constraintStart_toEndOf="@+id/monster_name"
-        app:layout_constraintTop_toBottomOf="@+id/fire_lion_visual" />
+        app:layout_constraintBottom_toBottomOf="@+id/fire_habitat"
+        app:layout_constraintStart_toEndOf="@+id/monster_name" />
 
     <!--Container LIFE -->
 
@@ -159,8 +148,8 @@
         android:id="@+id/text_life"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/text_life"
         android:gravity="center"
+        android:text="@string/text_life"
         app:layout_constraintBottom_toBottomOf="@+id/container_life"
         app:layout_constraintEnd_toEndOf="@+id/container_life"
         app:layout_constraintStart_toStartOf="@+id/container_life" />
@@ -275,7 +264,6 @@
         app:layout_constraintTop_toTopOf="@+id/container_power" />
 
 
-
     <!--Container STAMINA -->
 
     <View
@@ -346,6 +334,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/bte_fire" />
+
 
 
 
