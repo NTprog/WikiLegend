@@ -1,6 +1,7 @@
 <resources>
 
     <!--Menu-->
+    <string name="scrollView_menu">ScrollView</string>
     <string name="app_name">WikiLegend</string>
     <string name="textFireLion">Fire Lion</string>
     <string name="textLightSpirit">Light Spirit</string>
