@@ -337,9 +337,5 @@
         app:srcCompat="@drawable/bte_fire" />
 
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> d84f7be5180f96cb4e5e2577225902f059b722ec
 </android.support.constraint.ConstraintLayout>
