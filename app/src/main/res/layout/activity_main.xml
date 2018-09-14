@@ -12,10 +12,11 @@
         android:id="@+id/imageView2"
         android:layout_width="168dp"
         android:layout_height="64dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/monsterlegends_logo"
-        tools:layout_editor_absoluteY="0dp" />
+        app:srcCompat="@drawable/monsterlegends_logo" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -27,6 +28,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.875"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pandalf" />
@@ -41,17 +43,19 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pandalf" />
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="352dp"
-        android:layout_height="203dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="382dp"
+        android:layout_height="391dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
@@ -61,107 +65,251 @@
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="364dp">
 
-            <Button
-                android:id="@+id/imageButton3"
+
+            <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="#FD752B"
-                android:text="Fire Lion"
-                app:srcCompat="@android:color/holo_orange_dark"
-                tools:layout_editor_absoluteX="8dp"
-                tools:layout_editor_absoluteY="93dp" />
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/ButtonFireLion"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:background="#FD752B"
+                    android:stateListAnimator="@null"
+                    android:text="@string/textFireLion"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:color/holo_orange_dark" />
+
+                <ImageView
+                    android:id="@+id/image_fire_lion"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_marginEnd="200dp"
+                    android:layout_marginRight="200dp"
+                    app:layout_constraintEnd_toEndOf="@+id/ButtonFireLion"
+                    app:layout_constraintTop_toTopOf="@+id/ButtonFireLion"
+                    app:srcCompat="@drawable/fire_lion_1" />
 
 
-            <Button
-                android:id="@+id/imageButton5"
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:background="#B263A7"
-                app:srcCompat="@android:color/background_light"
-                tools:layout_editor_absoluteX="12dp"
-                tools:layout_editor_absoluteY="94dp" />
+                <Button
+                    android:id="@+id/ButtonLightSPirit"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:background="#B263A7"
+                    android:stateListAnimator="@null"
+                    android:text="@string/textLightSpirit"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ButtonFireLion"
+                    app:srcCompat="@android:color/background_light" />
 
-            <Button
-                android:id="@+id/imageButton6"
-                android:layout_width="match_parent"
-                android:layout_height="62dp"
-                android:background="#43ADDD"
-                app:srcCompat="@android:color/background_light"
-                tools:layout_editor_absoluteX="5dp"
-                tools:layout_editor_absoluteY="116dp" />
 
-            <Button
-                android:id="@+id/imageButton7"
-                android:layout_width="match_parent"
-                android:layout_height="63dp"
-                android:background="#71674B"
-                app:srcCompat="@android:color/background_light"
-                tools:layout_editor_absoluteX="12dp"
-                tools:layout_editor_absoluteY="263dp" />
+                <ImageView
+                    android:id="@+id/image_light_spirit"
+                    android:layout_width="0dp"
+                    android:layout_height="66dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/ButtonLightSPirit"
+                    app:layout_constraintTop_toTopOf="@+id/ButtonLightSPirit"
+                    app:srcCompat="@drawable/light_spirit_1" />
 
-            <Button
-                android:id="@+id/imageButton8"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:background="#256796"
-                app:srcCompat="@android:color/background_light"
-                tools:layout_editor_absoluteX="9dp"
-                tools:layout_editor_absoluteY="98dp" />
+                <Button
+                    android:id="@+id/ButtonTurtle"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:background="#43ADDD"
+                    android:stateListAnimator="@null"
+                    android:text="@string/textTurtle"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ButtonLightSPirit"
+                    app:srcCompat="@android:color/background_light" />
 
-            <Button
-                android:id="@+id/imageButton9"
-                android:layout_width="match_parent"
-                android:layout_height="67dp"
-                android:background="#AA635A"
-                app:srcCompat="@android:color/background_light"
-                tools:layout_editor_absoluteX="9dp"
-                tools:layout_editor_absoluteY="104dp" />
+                <ImageView
+                    android:id="@+id/image_turtle"
+                    android:layout_width="0dp"
+                    android:layout_height="66dp"
+                    android:layout_marginEnd="200dp"
+                    android:layout_marginRight="200dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/ButtonTurtle"
+                    app:layout_constraintTop_toTopOf="@+id/ButtonTurtle"
+                    app:srcCompat="@drawable/turtle_1" />
 
-            <Button
-                android:id="@+id/imageButton11"
-                android:layout_width="match_parent"
-                android:layout_height="57dp"
-                android:background="#8B8F8C"
-                app:srcCompat="@android:color/background_light"
-                tools:layout_editor_absoluteX="4dp"
-                tools:layout_editor_absoluteY="106dp" />
+                <Button
+                    android:id="@+id/ButtonPanda"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:background="#71674B"
+                    android:stateListAnimator="@null"
+                    android:text="@string/textPanda"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ButtonTurtle"
+                    app:srcCompat="@android:color/background_light" />
 
-            <Button
-                android:id="@+id/imageButton12"
-                android:layout_width="match_parent"
-                android:layout_height="66dp"
-                android:background="#5E3885"
-                app:srcCompat="@android:color/background_light"
-                tools:layout_editor_absoluteX="12dp"
-                tools:layout_editor_absoluteY="96dp" />
+                <ImageView
+                    android:id="@+id/image_panda"
+                    android:layout_width="0dp"
+                    android:layout_height="66dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/ButtonPanda"
+                    app:layout_constraintTop_toTopOf="@+id/ButtonPanda"
+                    app:srcCompat="@drawable/panda_1" />
 
-            <Button
-                android:id="@+id/imageButton13"
-                android:layout_width="match_parent"
-                android:layout_height="68dp"
-                app:srcCompat="@android:color/background_light"
-                tools:layout_editor_absoluteX="7dp"
-                tools:layout_editor_absoluteY="99dp" />
+                <Button
+                    android:id="@+id/ButtonThunder"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:background="#256796"
+                    android:stateListAnimator="@null"
+                    android:text="@string/textThunderEagle"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ButtonPanda"
+                    app:srcCompat="@android:color/background_light" />
+
+                <ImageView
+                    android:id="@+id/image_thunder_eagle"
+                    android:layout_width="0dp"
+                    android:layout_height="66dp"
+                    android:layout_marginEnd="200dp"
+                    android:layout_marginRight="200dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/ButtonThunder"
+                    app:layout_constraintTop_toTopOf="@+id/ButtonThunder"
+                    app:srcCompat="@drawable/thunder_eagle_1" />
+
+                <Button
+                    android:id="@+id/ButtonRockilla"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:background="#AA635A"
+                    android:stateListAnimator="@null"
+                    android:text="@string/textRockilla"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ButtonThunder"
+                    app:srcCompat="@android:color/background_light" />
+
+                <ImageView
+                    android:id="@+id/image_rockilla"
+                    android:layout_width="0dp"
+                    android:layout_height="66dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/ButtonRockilla"
+                    app:layout_constraintTop_toTopOf="@+id/ButtonRockilla"
+                    app:srcCompat="@drawable/rockilla_1a" />
+
+                <Button
+                    android:id="@+id/ButtonMetalsaur"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:background="#8B8F8C"
+                    android:stateListAnimator="@null"
+                    android:text="@string/textMetalsaur"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ButtonRockilla"
+                    app:srcCompat="@android:color/background_light" />
+
+                <ImageView
+                    android:id="@+id/image_metalsaur"
+                    android:layout_width="0dp"
+                    android:layout_height="66dp"
+                    android:layout_marginEnd="200dp"
+                    android:layout_marginRight="200dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/ButtonMetalsaur"
+                    app:layout_constraintTop_toTopOf="@+id/ButtonMetalsaur"
+                    app:srcCompat="@drawable/metalsaur_1" />
+
+                <Button
+                    android:id="@+id/ButtonGenie"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:background="#62B0FE"
+                    android:stateListAnimator="@null"
+                    android:text="@string/textGenie"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ButtonMetalsaur"
+                    app:srcCompat="@android:color/background_light" />
+
+                <ImageView
+                    android:id="@+id/image_genie"
+                    android:layout_width="0dp"
+                    android:layout_height="66dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/ButtonGenie"
+                    app:layout_constraintTop_toTopOf="@+id/ButtonGenie"
+                    app:srcCompat="@drawable/genie_1" />
+
+                <Button
+                    android:id="@+id/ButtonTyrannoking"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:background="#5E3885"
+                    android:stateListAnimator="@null"
+                    android:text="@string/textTyrannoking"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ButtonGenie"
+                    app:srcCompat="@android:color/background_light" />
+
+                <ImageView
+                    android:id="@+id/image_tyrannoking"
+                    android:layout_width="0dp"
+                    android:layout_height="66dp"
+                    android:layout_marginEnd="200dp"
+                    android:layout_marginRight="200dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/ButtonTyrannoking"
+                    app:layout_constraintTop_toTopOf="@+id/ButtonTyrannoking"
+                    app:srcCompat="@drawable/tyrannoking_1" />
+
+
+            </android.support.constraint.ConstraintLayout>
 
         </LinearLayout>
-
     </ScrollView>
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:srcCompat="@drawable/rockilla_3a" />
 
 
 </android.support.constraint.ConstraintLayout>
