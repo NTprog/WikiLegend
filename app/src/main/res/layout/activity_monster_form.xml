@@ -98,7 +98,7 @@
         android:id="@+id/monster_name"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="130dp"
         android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp"
         android:text="@string/fire_lion_name"
@@ -110,14 +110,13 @@
         android:id="@+id/monster_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp"
         android:text="@string/fire_lion_1_level"
         android:textColor="@color/colorWhite"
         android:textSize="23sp"
-        app:layout_constraintBottom_toBottomOf="@+id/fire_habitat"
-        app:layout_constraintStart_toEndOf="@+id/monster_name" />
+        app:layout_constraintStart_toEndOf="@+id/monster_name"
+        app:layout_constraintTop_toBottomOf="@+id/myCircleView" />
 
     <!--Container LIFE -->
 

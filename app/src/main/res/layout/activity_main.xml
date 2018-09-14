@@ -71,7 +71,7 @@
                 android:layout_height="match_parent">
 
                 <Button
-                    android:id="@+id/ButtonFireLion"
+                    android:id="@+id/fireButton"
                     android:layout_width="match_parent"
                     android:layout_height="85dp"
                     android:background="#FD752B"
@@ -91,8 +91,8 @@
                     android:layout_height="70dp"
                     android:layout_marginEnd="200dp"
                     android:layout_marginRight="200dp"
-                    app:layout_constraintEnd_toEndOf="@+id/ButtonFireLion"
-                    app:layout_constraintTop_toTopOf="@+id/ButtonFireLion"
+                    app:layout_constraintEnd_toEndOf="@+id/fireButton"
+                    app:layout_constraintTop_toTopOf="@+id/fireButton"
                     app:srcCompat="@drawable/fire_lion_1" />
 
 
@@ -108,7 +108,7 @@
                     android:textSize="25sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/ButtonFireLion"
+                    app:layout_constraintTop_toBottomOf="@+id/fireButton"
                     app:srcCompat="@android:color/background_light" />
 
 
