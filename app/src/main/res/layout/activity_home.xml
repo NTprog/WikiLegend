@@ -7,30 +7,17 @@
     tools:context=".HomeActivity">
 
     <ImageView
-<<<<<<< HEAD
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="129dp"
-        android:layout_marginBottom="233dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="177dp"
-=======
+
+
         android:id="@+id/imageView5"
         android:layout_width="match_parent"
         android:layout_height="725dp"
->>>>>>> 6c80fdb757a606abda2ffcabd04df8575ac5bb7b
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-<<<<<<< HEAD
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/monsterlegends_logo" />
-
-=======
         app:layout_constraintVertical_bias="0.714"
         app:srcCompat="@drawable/pandalf_acceuil" />
->>>>>>> 6c80fdb757a606abda2ffcabd04df8575ac5bb7b
+
 </android.support.constraint.ConstraintLayout>

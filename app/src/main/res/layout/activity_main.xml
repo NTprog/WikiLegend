@@ -52,11 +52,7 @@
     <ScrollView
         android:id="@+id/scrollView_menu"
         android:layout_width="382dp"
-<<<<<<< HEAD
-        android:layout_height="470dp"
-=======
         android:layout_height="484dp"
->>>>>>> 6c80fdb757a606abda2ffcabd04df8575ac5bb7b
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.523"
