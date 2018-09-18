@@ -20,10 +20,16 @@
     <!--MONSTER FORM-->
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <!--A) GENERAL DESCRIPTIONS-->
 =======
         <!--Descriptions/General-->
 >>>>>>> 0a6d9629c3e8894cace2a257f6b89641a005576e
+=======
+
+        <!--Descriptions/General-->
+
+>>>>>>> 6c80fdb757a606abda2ffcabd04df8575ac5bb7b
     <string name="des_monster">A visual of the monster </string>
     <string name="des_arrow_right">Arrow Right</string>
     <string name="des_arrow_left">Arrow Left</string>
@@ -34,6 +40,7 @@
     <string name="text_stamina">STAMINA</string>
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     <!--B) FIRE LION-->
     <string name="fire_lion_name">Fire Lion</string>
@@ -56,6 +63,9 @@
     <string name="fire_lion_3_power">100</string>
     <string name="fire_lion_3_stamina">100</string>
 =======
+=======
+
+>>>>>>> 6c80fdb757a606abda2ffcabd04df8575ac5bb7b
         <!--Statistics-->
 
     <string name="fire_lion_life">81</string>
@@ -124,5 +134,6 @@
 
 
 >>>>>>> 0a6d9629c3e8894cace2a257f6b89641a005576e
+
 
 </resources>

@@ -15,7 +15,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class MonsterForm extends AppCompatActivity {
+
+
+    public class MonsterForm extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
