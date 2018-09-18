@@ -11,7 +11,9 @@ import android.widget.Button;
 import android.view.View;
 
 
-public class MonsterForm extends AppCompatActivity {
+
+
+    public class MonsterForm extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
