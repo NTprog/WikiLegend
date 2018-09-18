@@ -14,11 +14,9 @@
 
     <!--MONSTER FORM-->
 
-<<<<<<< HEAD
-    <!--A) GENERAL DESCRIPTIONS-->
-=======
+
         <!--Descriptions/General-->
->>>>>>> 0a6d9629c3e8894cace2a257f6b89641a005576e
+
     <string name="des_monster">A visual of the monster </string>
     <string name="des_arrow_right">Arrow Right</string>
     <string name="des_arrow_left">Arrow Left</string>
@@ -29,28 +27,7 @@
     <string name="text_stamina">STAMINA</string>
 
 
-<<<<<<< HEAD
-    <!--B) FIRE LION-->
-    <string name="fire_lion_name">Fire Lion</string>
-    <!--Evolution 1 -->
-    <string name="fire_lion_1_level">LVL 54</string>
-    <string name="fire_lion_1_life">100</string>
-    <string name="fire_lion_1_speed">100</string>
-    <string name="fire_lion_1_power">100</string>
-    <string name="fire_lion_1_stamina">100</string>
-    <!--Evolution 2 -->
-    <string name="fire_lion_2_level">LVL X</string>
-    <string name="fire_lion_2_life">100</string>
-    <string name="fire_lion_2_speed">100</string>
-    <string name="fire_lion_2_power">100</string>
-    <string name="fire_lion_2_stamina">100</string>
-    <!--Evolution 3 -->
-    <string name="fire_lion_3_level">LVL X</string>
-    <string name="fire_lion_3_life">100</string>
-    <string name="fire_lion_3_speed">100</string>
-    <string name="fire_lion_3_power">100</string>
-    <string name="fire_lion_3_stamina">100</string>
-=======
+
         <!--Statistics-->
 
     <string name="fire_lion_life">81</string>
@@ -118,6 +95,6 @@
 
 
 
->>>>>>> 0a6d9629c3e8894cace2a257f6b89641a005576e
+
 
 </resources>
