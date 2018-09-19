@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,10 +38,6 @@ import android.widget.Toast;
 
     }
 
-
-
-
-
     public void settingImageSlider(ViewPager viewPager, String monsterID) {
 
         ImageAdapter adapter = new ImageAdapter(this, monsterID);
@@ -62,7 +59,6 @@ import android.widget.Toast;
 
     }
 
-
     public void finish(){
         super.finish();
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
@@ -70,12 +66,38 @@ import android.widget.Toast;
 
     public void monsterBuilder(String monsterID, int indexEvolution, boolean datasAlreadySet) {
 
-        //Initialazing Variables
+        //INITIALISATION VARIABLES
         TextView name = findViewById(R.id.monster_name);
         TextView level = findViewById(R.id.monster_level);
         ImageView egg = findViewById(R.id.monster_egg);
         ImageView element = findViewById(R.id.monster_element);
         ImageView habitat = findViewById(R.id.monster_habitat);
+        TextView life = findViewById(R.id.stat_life);
+        TextView speed = findViewById(R.id.stat_speed);
+        TextView power = findViewById(R.id.stat_power);
+        TextView stamina = findViewById(R.id.stat_stamina);
+        View circle = findViewById(R.id.myCircleView);
+
+        String lifeStat = getResources().getString(MonsterForm.this.getResources().getIdentifier(
+                monsterID+"_life",
+                "string",
+                MonsterForm.this.getPackageName()));
+
+        String speedStat = getResources().getString(MonsterForm.this.getResources().getIdentifier(
+                monsterID+"_speed",
+                "string",
+                MonsterForm.this.getPackageName()));
+
+        String powerStat = getResources().getString(MonsterForm.this.getResources().getIdentifier(
+                monsterID+"_power",
+                "string",
+                MonsterForm.this.getPackageName()));
+
+        String staminaStat = getResources().getString(MonsterForm.this.getResources().getIdentifier(
+                monsterID+"_stamina",
+                "string",
+                MonsterForm.this.getPackageName()));
+
 
 
 
@@ -103,6 +125,12 @@ import android.widget.Toast;
                 "drawable",
                 MonsterForm.this.getPackageName()));
 
+        //Setting background circle
+        circle.setBackgroundDrawable(ContextCompat.getDrawable(MonsterForm.this, MonsterForm.this.getResources().getIdentifier(
+                "circle_"+ monsterID,
+                "drawable",
+                MonsterForm.this.getPackageName())) );
+
 
         //Setting level
         if(indexEvolution==1) {
@@ -116,28 +144,30 @@ import android.widget.Toast;
 
         }
 
+        //Setting Stats
 
+        if(indexEvolution==1) {
+            life.setText(lifeStat);
+            speed.setText(speedStat);
+            power.setText(powerStat);
+            stamina.setText(staminaStat);
+
+        } else if (indexEvolution==2) {
+            life.setText(String.valueOf(Integer.parseInt(lifeStat)+23*4));
+            speed.setText(String.valueOf(Integer.parseInt(speedStat)+23*4));
+            power.setText(String.valueOf(Integer.parseInt(powerStat)+23*4));
+            stamina.setText(String.valueOf(Integer.parseInt(staminaStat)+23*4));
+
+        } else {
+            life.setText(String.valueOf(Integer.parseInt(lifeStat)+23*7));
+            speed.setText(String.valueOf(Integer.parseInt(speedStat)+23*7));
+            power.setText(String.valueOf(Integer.parseInt(powerStat)+23*7));
+            stamina.setText(String.valueOf(Integer.parseInt(staminaStat)+23*7));
+
+        }
 
 
     }
 
 
-
-
 }
-
-
-/*SAVE
-*
-       int indexEvolution = viewPager.getCurrentItem();
-
-
-        //TEST
-        Toast toast = Toast.makeText(getApplicationContext(),
-                "Monster ID : " + monsterID,
-                Toast.LENGTH_SHORT);
-
-        toast.show();
-*
-*
-* */
