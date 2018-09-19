@@ -15,7 +15,7 @@ public class ImageAdapter extends PagerAdapter {
     private int[] mImageIds;
 
 
-    //Constructor. Set different images for each monster when a new ImageAdapter is istantiated
+    //Constructor. Set different images for each monster when a new ImageAdapter is is initiated
      ImageAdapter(Context context, String monsterID){
         mContext = context;
 

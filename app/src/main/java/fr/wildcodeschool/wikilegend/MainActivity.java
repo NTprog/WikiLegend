@@ -3,19 +3,24 @@ package fr.wildcodeschool.wikilegend;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        String monsterID = getIntent().getStringExtra("monsterID");
+        viewPager  = (ViewPager) findViewById(R.id.View_Pager_Menu);
+        ImageAdapterMenu imageAdapterMenu = new ImageAdapterMenu(this);
+        viewPager.setAdapter(imageAdapterMenu);
 
         //Initialazing variables
 
@@ -40,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         settingButton(tyrannokingButton, "tyrannoking");
 
     }
+
+
 
     public void settingButton(Button button, final String monsterID){
         button.setOnClickListener(new View.OnClickListener() {
