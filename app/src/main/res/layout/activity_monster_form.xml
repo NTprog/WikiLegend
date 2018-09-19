@@ -49,22 +49,26 @@
         android:id="@+id/monster_habitat"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="82dp"
+        android:layout_marginBottom="72dp"
         app:layout_constraintBottom_toTopOf="@+id/monster_name"
         app:layout_constraintEnd_toEndOf="@+id/myCircleView"
         app:layout_constraintStart_toStartOf="@+id/myCircleView"
         app:srcCompat="@drawable/fire_lion_habitat"
         tools:ignore="ContentDescription" />
 
+
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
-        android:layout_width="230dp"
-        android:layout_height="230dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="65dp"
+        android:layout_marginTop="32dp"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toTopOf="@+id/monster_level"
         app:layout_constraintEnd_toEndOf="@+id/monster_habitat"
         app:layout_constraintStart_toStartOf="@+id/myCircleView"
-        app:layout_constraintTop_toBottomOf="@+id/logo">
+        app:layout_constraintTop_toTopOf="@+id/myCircleView">
 
     </android.support.v4.view.ViewPager>
 
