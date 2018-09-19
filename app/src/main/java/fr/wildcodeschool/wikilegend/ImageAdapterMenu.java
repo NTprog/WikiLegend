@@ -16,7 +16,7 @@ public class ImageAdapterMenu extends PagerAdapter{
 
     private Context context;
     private LayoutInflater layoutInflater;
-    private Integer [] images = {R.drawable.fire_lion_3,
+    private Integer [] images = {R.drawable.fire_lion_3 ,
     R.drawable.genie_3,
     R.drawable.light_spirit_3,
     R.drawable.metalsaur_3,
@@ -25,6 +25,7 @@ public class ImageAdapterMenu extends PagerAdapter{
     R.drawable.thunder_eagle_3,
     R.drawable.turtle_3,
     R.drawable.tyrannoking_3};
+
 
     public ImageAdapterMenu(Context context) {
 
@@ -48,7 +49,12 @@ public class ImageAdapterMenu extends PagerAdapter{
 
         ImageView imageView = new ImageView(context);
         imageView.setImageResource(images[position]);
-        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
+
+
+
+
+
 
         ViewPager vp = (ViewPager) container;
         vp.addView(imageView, 0);

@@ -9,6 +9,9 @@
     tools:context=".MainActivity">
 
 
+
+
+
     <ImageView
         android:id="@+id/logo_menu_monster"
         android:layout_width="168dp"
@@ -49,20 +52,30 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pandalf" />
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/View_Pager_Menu"
-        android:layout_width="368dp"
-        android:layout_height="190dp"
-        android:layout_marginBottom="8dp"
+    <ImageView
+        android:id="@+id/habitat"
+        android:layout_width="match_parent"
+        android:layout_height="446dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/myCircleView"
+        app:layout_constraintStart_toStartOf="@+id/myCircleView"
+        app:layout_constraintTop_toTopOf="@+id/myCircleView"
+        app:srcCompat="@drawable/fire_lion_habitat"
+        tools:ignore="ContentDescription" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/View_Pager_Menu"
+        android:layout_width="381dp"
+        android:layout_height="153dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView_menu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_menu_monster" >
+        app:layout_constraintTop_toBottomOf="@+id/logo_menu_monster"
+        app:layout_constraintVertical_bias="0.39999998">
 
     </android.support.v4.view.ViewPager>
 

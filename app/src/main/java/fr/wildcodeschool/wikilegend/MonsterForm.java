@@ -1,23 +1,13 @@
 package fr.wildcodeschool.wikilegend;
 
-import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Button;
-import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
-
-
-    public class MonsterForm extends AppCompatActivity {
+public class MonsterForm extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +65,7 @@ import android.widget.Toast;
         TextView level = findViewById(R.id.monster_level);
         ImageView egg = findViewById(R.id.monster_egg);
         ImageView element = findViewById(R.id.monster_element);
-        ImageView habitat = findViewById(R.id.monster_habitat);
+        ImageView habitat = findViewById(R.id.habitat);
 
 
 
