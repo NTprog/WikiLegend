@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 
@@ -45,18 +46,64 @@ public class ImageAdapterMenu extends PagerAdapter{
     }
 
     @Override
-    public Object instantiateItem(ViewGroup container, int position) {
+    public Object instantiateItem(ViewGroup container, final int position) {
+        String monsterID = "fire_lion";
+
+        if (position == 0){
+            monsterID = "fire_lion";
+        }
+
+        if (position == 1){
+            monsterID = "genie";
+        }
+
+        if (position == 2){
+            monsterID = "light_spirit";
+        }
+
+        if (position == 3){
+            monsterID = "metalsaur";
+        }
+
+        if (position == 4){
+            monsterID = "panda";
+        }
+
+        if (position == 5){
+            monsterID = "rockilla";
+        }
+
+        if (position == 6){
+            monsterID = "thunder_eagle";
+        }
+
+        if (position == 7){
+            monsterID = "turtle";
+        }
+
+        if (position == 8){
+            monsterID = "tyrannoking";
+        }
+
+        final String monsterId= monsterID;
+
+
+
+
 
         ImageView imageView = new ImageView(context);
         imageView.setImageResource(images[position]);
         imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
 
-
-
-
-
-
         ViewPager vp = (ViewPager) container;
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, MonsterForm.class);
+                intent.putExtra("monsterID", monsterId);
+                context.startActivity(intent);
+            }
+        });
         vp.addView(imageView, 0);
         return imageView;
 

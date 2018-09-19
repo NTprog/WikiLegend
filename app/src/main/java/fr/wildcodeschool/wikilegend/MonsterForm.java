@@ -18,6 +18,7 @@ public class MonsterForm extends AppCompatActivity {
         //Initialazing variables
         String monsterID = getIntent().getStringExtra("monsterID");
         ViewPager viewPager = findViewById(R.id.viewPager);
+        ViewPager viewPagerMenu = findViewById(R.id.View_Pager_Menu);
 
         //Creating the page
         settingImageSlider(viewPager, monsterID);
