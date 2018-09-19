@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.media.MediaPlayer;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -97,6 +98,25 @@ import android.widget.Toast;
                 monsterID+"_stamina",
                 "string",
                 MonsterForm.this.getPackageName()));
+
+        //Setting roar
+
+        final MediaPlayer mediaPlayer = MediaPlayer.create(MonsterForm.this, MonsterForm.this.getResources().getIdentifier(
+                "scream_"+monsterID,
+                "raw",
+                MonsterForm.this.getPackageName()));
+        //mediaPlayer.prepareAsync();
+        mediaPlayer.setVolume(0.2f, 0.2f);
+
+        egg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mediaPlayer.start();
+
+            }
+
+        });
+
 
 
         //Setting name
