@@ -99,8 +99,6 @@ import android.widget.Toast;
                 MonsterForm.this.getPackageName()));
 
 
-
-
         //Setting name
         name.setText(MonsterForm.this.getResources().getIdentifier(
                 monsterID+"_name",
