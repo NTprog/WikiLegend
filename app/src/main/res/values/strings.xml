@@ -93,7 +93,17 @@
     <string name="level_2">LVL 4-6</string>
     <string name="level_3">LVL 7-40</string>
 
+        <!--Informations-->
 
+    <string name="fire_lion_information">Possessing a mane of white-hot hell fire and more than just a sting in his tail – the Fire Lion is a creature of mythic awesomeness! The Fire Lion will make fast work of anyone foolish enough to challenge him.</string>
+    <string name="genie_information">Formed from bright, hot-blue fire and able to travel great distances in the blink of an eye. Think twice before entering into any kind of agreement with these magical marvels.</string>
+    <string name="light_spirit_information">These lighthearted pixie creatures spend most of their time unseen. On account of how they are made from light - they often get mistaken for mirages, yet here they are, right on your island!</string>
+    <string name="metalsaur_information">Metal monsters are tough, hard to beat and dazzling. Metalsaur is pure metal, common but deadly. And now with him, a new age of breeding has started! The new Metal element is here!</string>
+    <string name="panda_information">The Panda, long a symbol of melancholy and sadness, but no longer! These Pandas are natural ninjas! What they lack in stealth, they more than make up for in unexpected agility, reflexes and... clumsiness.</string>
+    <string name="rockilla_information">These hardened souls roam the earthy plains in search of their tail. They live by a strict code favoring loyalty over all else; any who challenge this are reduced to dust by a swift blow from their gargantuan fists. </string>
+    <string name="thunder_eagle_information">The Bringer of Storms, a once-loyal servant to the Gods of Thunder, transformed into Thunder Eagle form after a terrible betrayal. This sparky creature offers the perfect mix of grace and danger.</string>
+    <string name="turtle_information">Shy and unassuming, this tricky creature is master of the water realm and sharper than shattered glass. The Water Turtle may be slow on land, but he’s as dangerous as he is graceful in the ocean.</string>
+    <string name="tyrannoking_information">Hail to the king baby! Self-proclaimed Kings of the Lizards, these dark creatures offer the perfect mix of danger, mystery and coolness to any island. Just don’t mention their short arms... these tyrants have got a bite!</string>
 
 
 

@@ -1,9 +1,6 @@
 package fr.wildcodeschool.wikilegend;
 
-import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
+
 import android.media.MediaPlayer;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
@@ -12,16 +9,11 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
-import android.widget.Button;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-import android.widget.Toast;
-
-
 
 
     public class MonsterForm extends AppCompatActivity {
@@ -32,19 +24,20 @@ import android.widget.Toast;
         setContentView(R.layout.activity_monster_form);
 
 
+
         //Initialazing variables
         String monsterID = getIntent().getStringExtra("monsterID");
         ViewPager viewPager = findViewById(R.id.viewPager);
 
         View popUpPosition = findViewById(R.id.myCircleView);
-        TextView popUpButton = findViewById(R.id.monster_name);
-
+        ImageView popUpButton = findViewById(R.id.popUpButton);
 
         //Creating the page
         settingImageSlider(viewPager, monsterID);
-        monsterBuilder(monsterID, 1, false);
+        settingPopUpWindow(popUpPosition, popUpButton, monsterID);
+        monsterBuilder(monsterID, 1);
         addListenerOnSlider(viewPager, monsterID);
-        settingPopUpWindow(popUpPosition, popUpButton);
+
 
 
     }
@@ -64,7 +57,7 @@ import android.widget.Toast;
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
 
             public void onPageSelected(int position) {
-                monsterBuilder(monsterID, position+1, false);
+                monsterBuilder(monsterID, position+1);
             }
         });
 
@@ -75,7 +68,7 @@ import android.widget.Toast;
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
-    public void monsterBuilder(String monsterID, int indexEvolution, boolean datasAlreadySet) {
+    public void monsterBuilder(String monsterID, int indexEvolution) {
 
         //INITIALISATION VARIABLES
         TextView name = findViewById(R.id.monster_name);
@@ -126,6 +119,16 @@ import android.widget.Toast;
             }
 
         });
+
+
+
+        //Setting infodescription
+
+
+       /* popUpText.setText(MonsterForm.this.getResources().getIdentifier(
+                monsterID+"_information",
+                "string",
+                MonsterForm.this.getPackageName()));*/
 
 
 
@@ -197,12 +200,12 @@ import android.widget.Toast;
 
     }
 
-    public void settingPopUpWindow (final View popUpPosition, TextView popUpButton) {
+    public void settingPopUpWindow (final View popUpPosition, ImageView popUpButton, final String monsterID) {
 
         popUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onButtonShowPopupWindowClick(popUpPosition);
+                onButtonShowPopupWindowClick(popUpPosition, monsterID);
             }
 
         });
@@ -215,12 +218,12 @@ import android.widget.Toast;
 
     }
 
-    public void onButtonShowPopupWindowClick(View view) {
+    public void onButtonShowPopupWindowClick(View view, String monsterID) {
 
-            // inflate the layout of the popup window
-            LayoutInflater inflater = (LayoutInflater)
-                    getSystemService(LAYOUT_INFLATER_SERVICE);
-            View popupView = inflater.inflate(R.layout.popup_window, null);
+        // inflate the layout of the popup window
+        LayoutInflater inflater = (LayoutInflater)
+                getSystemService(LAYOUT_INFLATER_SERVICE);
+        View popupView = inflater.inflate(R.layout.popup_window, null);
 
             // create the popup window
             int width = LinearLayout.LayoutParams.WRAP_CONTENT;
@@ -231,6 +234,14 @@ import android.widget.Toast;
             // show the popup window
             // which view you pass in doesn't matter, it is only used for the window tolken
             popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+
+            //Recup popUpText and set it REVOIR ICI
+            TextView popUpText = popupView.findViewById(R.id.pop_up);
+            popUpText.setText(MonsterForm.this.getResources().getIdentifier(
+                monsterID+"_information",
+                "string",
+                MonsterForm.this.getPackageName()));
+
 
             // dismiss the popup window when touched
             popupView.setOnTouchListener(new View.OnTouchListener() {
