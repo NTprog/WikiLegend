@@ -5,6 +5,13 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorBackground">#81a9b5</color>
     <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
     <color name="colorPopUp">#ffffcc</color>
+    <color name="colorRed">#CC0000</color>
+
+
+
+
+
 
 </resources>
