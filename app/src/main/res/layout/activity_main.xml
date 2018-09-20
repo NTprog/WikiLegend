@@ -9,18 +9,14 @@
     tools:context=".MainActivity">
 
 
-
-
-
     <ImageView
         android:id="@+id/logo_menu_monster"
         android:layout_width="168dp"
         android:layout_height="64dp"
-        android:layout_marginBottom="228dp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView_menu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/monsterlegends_logo" />
+        app:srcCompat="@drawable/monsterlegends_logo"
+        tools:layout_editor_absoluteY="18dp" />
 
     <ImageView
         android:id="@+id/image_menu_pandalf_left"
@@ -55,11 +51,10 @@
     <ImageView
         android:id="@+id/habitat_menu"
         android:layout_width="match_parent"
-        android:layout_height="446dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView_menu"
         app:layout_constraintEnd_toEndOf="@+id/myCircleView"
         app:layout_constraintStart_toStartOf="@+id/myCircleView"
         app:layout_constraintTop_toTopOf="@+id/myCircleView"
@@ -68,14 +63,15 @@
 
     <android.support.v4.view.ViewPager
         android:id="@+id/View_Pager_Menu"
-        android:layout_width="381dp"
-        android:layout_height="153dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView_menu"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_menu_monster"
-        app:layout_constraintVertical_bias="0.39999998">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.53">
 
     </android.support.v4.view.ViewPager>
 
