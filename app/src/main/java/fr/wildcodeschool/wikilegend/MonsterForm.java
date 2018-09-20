@@ -42,6 +42,7 @@ import android.widget.TextView;
 
     }
 
+    /*Set a ViewPager as a slider to witch between different evolutions of each monster*/
     public void settingImageSlider(ViewPager viewPager, String monsterID) {
 
         ImageAdapter adapter = new ImageAdapter(this, monsterID);
@@ -49,7 +50,9 @@ import android.widget.TextView;
 
     }
 
-    //Add a Listener on the view Pager, in order to know when user change the "evolution-level-page"
+    /*Add a Listener on the slider, in order to know when user change the "evolution-level-page"
+    * When he/she does, it triggers a monsterBuilder method.
+    * */
     public void addListenerOnSlider(ViewPager viewPager, final String monsterID) {
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -63,11 +66,13 @@ import android.widget.TextView;
 
     }
 
+    /*Disable image on the slider when user switch */
     public void finish(){
         super.finish();
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
+    /*Build a different page for each monster and monster-evolution */
     public void monsterBuilder(String monsterID, int indexEvolution) {
 
         //INITIALISATION VARIABLES
@@ -102,7 +107,7 @@ import android.widget.TextView;
                 "string",
                 MonsterForm.this.getPackageName()));
 
-        //Setting roar
+        //SETTING ROAR
 
         final MediaPlayer mediaPlayer = MediaPlayer.create(MonsterForm.this, MonsterForm.this.getResources().getIdentifier(
                 "scream_"+monsterID,
@@ -121,49 +126,37 @@ import android.widget.TextView;
         });
 
 
-
-        //Setting infodescription
-
-
-       /* popUpText.setText(MonsterForm.this.getResources().getIdentifier(
-                monsterID+"_information",
-                "string",
-                MonsterForm.this.getPackageName()));*/
-
-
-
-        //Setting name
+        //SETTING NAME
         name.setText(MonsterForm.this.getResources().getIdentifier(
                 monsterID+"_name",
                 "string",
                 MonsterForm.this.getPackageName()));
 
-        //Setting egg
+        //SETTING EGG PICTO
         egg.setImageResource(MonsterForm.this.getResources().getIdentifier(
                 monsterID+"_0",
                 "drawable",
                 MonsterForm.this.getPackageName()));
 
-        //Setting element
+        //SETTING ELEMENT PICTO
         element.setImageResource(MonsterForm.this.getResources().getIdentifier(
                 "bte_" + monsterID,
                 "drawable",
                 MonsterForm.this.getPackageName()));
 
-        //Setting habitat
+        //SETTING HABITAT
         habitat.setImageResource(MonsterForm.this.getResources().getIdentifier(
                 monsterID+"_habitat",
                 "drawable",
                 MonsterForm.this.getPackageName()));
 
-        //Setting background circle
+        //SETTING BACKGROUNDCIRCLE
         circle.setBackgroundDrawable(ContextCompat.getDrawable(MonsterForm.this, MonsterForm.this.getResources().getIdentifier(
                 "circle_"+ monsterID,
                 "drawable",
                 MonsterForm.this.getPackageName())) );
 
-
-        //Setting level
+        //SETTING LEVEL
         if(indexEvolution==1) {
             level.setText(R.string.level_1);
 
@@ -175,7 +168,7 @@ import android.widget.TextView;
 
         }
 
-        //Setting Stats
+        //SETTING STATS
 
         if(indexEvolution==1) {
             life.setText(lifeStat);
@@ -200,6 +193,7 @@ import android.widget.TextView;
 
     }
 
+    /*Set the "info button" listener */
     public void settingPopUpWindow (final View popUpPosition, ImageView popUpButton, final String monsterID) {
 
         popUpButton.setOnClickListener(new View.OnClickListener() {
@@ -218,6 +212,7 @@ import android.widget.TextView;
 
     }
 
+    /*Set the PopUp Panel with a monster description adapted for each monster */
     public void onButtonShowPopupWindowClick(View view, String monsterID) {
 
         // inflate the layout of the popup window
@@ -235,15 +230,14 @@ import android.widget.TextView;
             // which view you pass in doesn't matter, it is only used for the window tolken
             popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
 
-            //Recup popUpText and set it REVOIR ICI
+            //Set a different text for each monster
             TextView popUpText = popupView.findViewById(R.id.pop_up);
             popUpText.setText(MonsterForm.this.getResources().getIdentifier(
                 monsterID+"_information",
                 "string",
                 MonsterForm.this.getPackageName()));
 
-
-            // dismiss the popup window when touched
+            //Dismiss the popup window when touched
             popupView.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {

@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    //Setting a button wich open the MonsterForm Activity and send the "MonsterID" as extra.
     public void settingButton(Button button, final String monsterID){
         button.setOnClickListener(new View.OnClickListener() {
             @Override
