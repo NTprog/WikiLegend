@@ -1,6 +1,8 @@
 <resources>
 
-    <!--MENU-->
+
+    <!--Menu-->
+    <string name="scrollView_menu">ScrollView</string>
     <string name="app_name">WikiLegend</string>
     <string name="textFireLion">Fire Lion</string>
     <string name="textLightSpirit">Light Spirit</string>
@@ -17,6 +19,7 @@
 
         <!--Descriptions/General-->
 
+
     <string name="des_monster">A visual of the monster </string>
     <string name="des_arrow_right">Arrow Right</string>
     <string name="des_arrow_left">Arrow Left</string>
@@ -25,7 +28,6 @@
     <string name="text_speed">SPEED</string>
     <string name="text_power">POWER</string>
     <string name="text_stamina">STAMINA</string>
-
 
 
         <!--Statistics-->
@@ -104,7 +106,6 @@
     <string name="thunder_eagle_information">The Bringer of Storms, a once-loyal servant to the Gods of Thunder, transformed into Thunder Eagle form after a terrible betrayal. This sparky creature offers the perfect mix of grace and danger.</string>
     <string name="turtle_information">Shy and unassuming, this tricky creature is master of the water realm and sharper than shattered glass. The Water Turtle may be slow on land, but he’s as dangerous as he is graceful in the ocean.</string>
     <string name="tyrannoking_information">Hail to the king baby! Self-proclaimed Kings of the Lizards, these dark creatures offer the perfect mix of danger, mystery and coolness to any island. Just don’t mention their short arms... these tyrants have got a bite!</string>
-
 
 
 </resources>

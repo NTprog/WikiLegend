@@ -1,6 +1,9 @@
 package fr.wildcodeschool.wikilegend;
 
 
+
+
+import android.annotation.SuppressLint;
 import android.media.MediaPlayer;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
@@ -16,7 +19,10 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 
+
+
     public class MonsterForm extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +34,7 @@ import android.widget.TextView;
         //Initialazing variables
         String monsterID = getIntent().getStringExtra("monsterID");
         ViewPager viewPager = findViewById(R.id.viewPager);
+        ViewPager viewPagerMenu = findViewById(R.id.View_Pager_Menu);
 
         View popUpPosition = findViewById(R.id.myCircleView);
         ImageView popUpButton = findViewById(R.id.popUpButton);
@@ -80,7 +87,7 @@ import android.widget.TextView;
         TextView level = findViewById(R.id.monster_level);
         ImageView egg = findViewById(R.id.monster_egg);
         ImageView element = findViewById(R.id.monster_element);
-        ImageView habitat = findViewById(R.id.monster_habitat);
+        ImageView habitat = findViewById(R.id.habitat);
         TextView life = findViewById(R.id.stat_life);
         TextView speed = findViewById(R.id.stat_speed);
         TextView power = findViewById(R.id.stat_power);
@@ -127,6 +134,7 @@ import android.widget.TextView;
 
 
         //SETTING NAME
+
         name.setText(MonsterForm.this.getResources().getIdentifier(
                 monsterID+"_name",
                 "string",
