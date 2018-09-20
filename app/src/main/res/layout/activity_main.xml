@@ -52,26 +52,26 @@
         android:id="@+id/habitat_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginTop="32dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/scrollView_menu"
         app:layout_constraintEnd_toEndOf="@+id/myCircleView"
         app:layout_constraintStart_toStartOf="@+id/myCircleView"
-        app:layout_constraintTop_toTopOf="@+id/myCircleView"
+        app:layout_constraintTop_toBottomOf="@+id/logo_menu_monster"
         app:srcCompat="@drawable/fire_lion_habitat"
         tools:ignore="ContentDescription" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/View_Pager_Menu"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="173dp"
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView_menu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.53">
+        app:layout_constraintTop_toTopOf="@+id/habitat_menu">
 
     </android.support.v4.view.ViewPager>
 
@@ -79,7 +79,7 @@
     <ScrollView
         android:id="@+id/scrollView_menu"
         android:layout_width="382dp"
-        android:layout_height="257dp"
+        android:layout_height="325dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.523"
