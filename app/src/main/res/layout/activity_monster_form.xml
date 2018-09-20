@@ -55,8 +55,10 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/myCircleView"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/myCircleView"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.556"
         app:srcCompat="@drawable/fire_lion_habitat"
         tools:ignore="ContentDescription" />
 
@@ -66,14 +68,16 @@
         android:layout_width="match_parent"
         android:layout_height="191dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="45dp"
+        android:layout_marginBottom="8dp"
         android:scaleType="fitStart"
         app:layout_constraintBottom_toTopOf="@+id/monster_level"
-        app:layout_constraintEnd_toEndOf="@+id/habitat"
-        app:layout_constraintStart_toStartOf="@+id/myCircleView"
-        app:layout_constraintTop_toTopOf="@+id/myCircleView">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     </android.support.v4.view.ViewPager>
+
+
 
 
     <!--MONSTER GENERAL INFORMATIONS -->
@@ -338,6 +342,72 @@
         app:layout_constraintStart_toEndOf="@+id/monster_name"
         app:layout_constraintTop_toBottomOf="@+id/monster_level"
         app:srcCompat="@drawable/ic_info_black_dp" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="111dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/monster_level"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager"
+        app:layout_constraintVertical_bias="0.872">
+
+        <ImageView
+            android:id="@+id/dot1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/dot2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circle_white" />
+
+        <ImageView
+            android:id="@+id/dot2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/dot3"
+            app:layout_constraintStart_toEndOf="@+id/dot1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circle_black" />
+
+        <ImageView
+            android:id="@+id/dot3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dot2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circle_black" />
+
+    </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>
 
 

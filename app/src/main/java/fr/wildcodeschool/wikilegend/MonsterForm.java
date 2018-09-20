@@ -36,6 +36,7 @@ import android.widget.TextView;
         ViewPager viewPager = findViewById(R.id.viewPager);
         ViewPager viewPagerMenu = findViewById(R.id.View_Pager_Menu);
 
+
         View popUpPosition = findViewById(R.id.myCircleView);
         ImageView popUpButton = findViewById(R.id.popUpButton);
 
@@ -64,12 +65,39 @@ import android.widget.TextView;
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
 
             public void onPageSelected(int position) {
+
                 monsterBuilder(monsterID, position+1);
+                dotBuilder(position+1);
+
+
             }
         });
 
     }
+    public void dotBuilder (int dotIndex){
+        ImageView dot1 = findViewById(R.id.dot1);
+        ImageView dot2 = findViewById(R.id.dot2);
+        ImageView dot3 = findViewById(R.id.dot3);
 
+        if(dotIndex == 1 ) {
+        dot1.setImageResource(R.drawable.circle_white);
+        dot2.setImageResource(R.drawable.circle_black);
+        dot3.setImageResource(R.drawable.circle_black);
+
+        }else if (dotIndex == 2){
+            dot1.setImageResource(R.drawable.circle_black);
+            dot2.setImageResource(R.drawable.circle_white);
+            dot3.setImageResource(R.drawable.circle_black);
+        }else {
+            dot1.setImageResource(R.drawable.circle_black);
+            dot2.setImageResource(R.drawable.circle_black);
+            dot3.setImageResource(R.drawable.circle_white);
+
+        }
+
+
+
+    }
     public void finish(){
         super.finish();
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
