@@ -93,7 +93,7 @@ public class ImageAdapterMenu extends PagerAdapter{
 
         ImageView imageView = new ImageView(context);
         imageView.setImageResource(images[position]);
-        imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
 
         ViewPager vp = (ViewPager) container;
         imageView.setOnClickListener(new View.OnClickListener() {

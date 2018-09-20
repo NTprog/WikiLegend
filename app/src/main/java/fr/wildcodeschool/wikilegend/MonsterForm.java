@@ -134,7 +134,6 @@ import android.widget.TextView;
 
 
         //SETTING NAME
-
         name.setText(MonsterForm.this.getResources().getIdentifier(
                 monsterID+"_name",
                 "string",
