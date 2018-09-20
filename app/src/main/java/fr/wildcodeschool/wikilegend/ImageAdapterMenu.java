@@ -97,6 +97,7 @@ public class ImageAdapterMenu extends PagerAdapter{
 
         ViewPager vp = (ViewPager) container;
         imageView.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, MonsterForm.class);

@@ -3,7 +3,6 @@ package fr.wildcodeschool.wikilegend;
 
 
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v4.content.ContextCompat;
@@ -18,11 +17,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
-
-
-    public class MonsterForm extends AppCompatActivity {
+public class MonsterForm extends AppCompatActivity {
 
 
     @Override
@@ -35,14 +33,19 @@ import android.widget.TextView;
         //Initialazing variables
         String monsterID = getIntent().getStringExtra("monsterID");
         ViewPager viewPager = findViewById(R.id.viewPager);
-        ViewPager viewPagerMenu = findViewById(R.id.View_Pager_Menu);
+        //ViewPager viewPagerMenu = findViewById(R.id.View_Pager_Menu);
 
-        View popUpPosition = findViewById(R.id.myCircleView);
-        ImageView popUpButton = findViewById(R.id.popUpButton);
+
+        View popUpPositionInfo = findViewById(R.id.myCircleView);
+        ImageView popUpButtonInfo = findViewById(R.id.popUpButton);
+
+        View popUpPositionElement = findViewById(R.id.monster_element);
+        ImageView popUpButtonElement = findViewById(R.id.monster_element);
 
         //Creating the page
         settingImageSlider(viewPager, monsterID);
-        settingPopUpWindow(popUpPosition, popUpButton, monsterID);
+        settingPopUpInformation(popUpPositionInfo, popUpButtonInfo, monsterID); // setting information popup
+        settingPopUpElement(popUpPositionElement, popUpButtonElement, monsterID); //setting element popup
         monsterBuilder(monsterID, 1);
         addListenerOnSlider(viewPager, monsterID);
 
@@ -56,6 +59,8 @@ import android.widget.TextView;
         });
     }
 
+
+        /*Start main Activity*/
         public void backToMain(){
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
@@ -64,7 +69,6 @@ import android.widget.TextView;
 
 
         /*Set a ViewPager as a slider to witch between different evolutions of each monster*/
-
         public void settingImageSlider(ViewPager viewPager, String monsterID) {
 
         ImageAdapter adapter = new ImageAdapter(this, monsterID);
@@ -82,13 +86,37 @@ import android.widget.TextView;
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
 
             public void onPageSelected(int position) {
+
                 monsterBuilder(monsterID, position+1);
+                dotBuilder(position+1);
+
+
             }
         });
 
     }
+    public void dotBuilder (int dotIndex) {
+        ImageView dot1 = findViewById(R.id.dot1);
+        ImageView dot2 = findViewById(R.id.dot2);
+        ImageView dot3 = findViewById(R.id.dot3);
 
-    /*Disable image on the slider when user switch */
+        if (dotIndex == 1) {
+            dot1.setImageResource(R.drawable.circle_white);
+            dot2.setImageResource(R.drawable.circle_black);
+            dot3.setImageResource(R.drawable.circle_black);
+
+        } else if (dotIndex == 2) {
+            dot1.setImageResource(R.drawable.circle_black);
+            dot2.setImageResource(R.drawable.circle_white);
+            dot3.setImageResource(R.drawable.circle_black);
+        } else {
+            dot1.setImageResource(R.drawable.circle_black);
+            dot2.setImageResource(R.drawable.circle_black);
+            dot3.setImageResource(R.drawable.circle_white);
+        }
+
+    }
+
     public void finish(){
         super.finish();
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
@@ -216,26 +244,21 @@ import android.widget.TextView;
     }
 
     /*Set the "info button" listener */
-    public void settingPopUpWindow (final View popUpPosition, ImageView popUpButton, final String monsterID) {
+    public void settingPopUpInformation (final View popUpPosition, ImageView popUpButton, final String monsterID) {
 
         popUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onButtonShowPopupWindowClick(popUpPosition, monsterID);
+                configurationPopUpInformation(popUpPosition, monsterID);
             }
 
         });
 
-
-
-
-
-
-
     }
 
+
     /*Set the PopUp Panel with a monster description adapted for each monster */
-    public void onButtonShowPopupWindowClick(View view, String monsterID) {
+    public void configurationPopUpInformation(View view, String monsterID) {
 
         // inflate the layout of the popup window
         LayoutInflater inflater = (LayoutInflater)
@@ -269,5 +292,112 @@ import android.widget.TextView;
             });
         }
 
+
+        /*Set the PopUp Panel with a description of the element, adapted for each monster */
+        public void configurationPopUpElement(View view, String monsterID) {
+
+            // inflate the layout of the popup window
+            LayoutInflater inflater = (LayoutInflater)
+                    getSystemService(LAYOUT_INFLATER_SERVICE);
+            View popupView = inflater.inflate(R.layout.popup_element, null);
+
+            // create the popup window
+            int width = LinearLayout.LayoutParams.WRAP_CONTENT;
+            int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+            boolean focusable = true; // lets taps outside the popup also dismiss it
+            final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
+
+            // show the popup window
+            // which view you pass in doesn't matter, it is only used for the window tolken
+            popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+
+            //Set a different text for each element
+            TextView popUpElementFirstText = popupView.findViewById(R.id.pop_up_first_element_text);
+            popUpElementFirstText.setText(MonsterForm.this.getResources().getIdentifier(
+                    monsterID+"_element",
+                    "string",
+                    MonsterForm.this.getPackageName()));
+
+            //Set a different text for each antagonist element
+            TextView popUpElementSecondText = popupView.findViewById(R.id.pop_up_second_element_text);
+            popUpElementSecondText.setText(MonsterForm.this.getResources().getIdentifier(
+                    monsterID+"_antagonist_element",
+                    "string",
+                    MonsterForm.this.getPackageName()));
+
+
+            //Set a different picto for each monster element
+            ImageView popUpElementFirstImage = popupView.findViewById(R.id.pop_up_first_element_image);
+            popUpElementFirstImage.setImageResource(MonsterForm.this.getResources().getIdentifier(
+                    "bte_"+monsterID,
+                    "drawable",
+                    MonsterForm.this.getPackageName()));
+
+
+            //Set a different picto for each antagonist monster element :
+
+            String antagonistElement = "fire_lion_element";
+
+            switch (monsterID)
+            {
+                case "fire_lion":
+                    antagonistElement = "bte_panda";
+                    break;
+                case "genie":
+                    antagonistElement = "bte_metalsaur";
+                    break;
+                case "light_spirit":
+                    antagonistElement = "bte_tyrannoking";
+                    break;
+                case "metalsaur":
+                    antagonistElement = "bte_light_spirit";
+                    break;
+                case "panda":
+                    antagonistElement = "bte_genie";
+                    break;
+                case "rockilla":
+                    antagonistElement = "bte_thunder_eagle";
+                    break;
+                case "thunder_eagle":
+                    antagonistElement = "bte_turtle";
+                    break;
+                case "turtle":
+                    antagonistElement = "bte_fire_lion";
+                    break;
+                case "tyrannoking":
+                    antagonistElement = "bte_rockilla";
+                    break;
+                default:
+
+            }
+
+            ImageView popUpElementSecondImage = popupView.findViewById(R.id.pop_up_second_element_image);
+            popUpElementSecondImage.setImageResource(MonsterForm.this.getResources().getIdentifier(
+                    antagonistElement,
+                    "drawable",
+                    MonsterForm.this.getPackageName()));
+
+            //Dismiss the popup window when touched
+            popupView.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    popupWindow.dismiss();
+                    return true;
+                }
+            });
+        }
+
+        /*Set the "element button" listener */
+        public void settingPopUpElement (final View popUpPosition, ImageView popUpButton, final String monsterID) {
+
+            popUpButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    configurationPopUpElement(popUpPosition, monsterID);
+                }
+
+            });
+
+        }
 
 }

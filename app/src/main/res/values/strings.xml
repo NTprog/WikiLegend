@@ -17,7 +17,7 @@
     <!--MONSTER FORM-->
 
 
-        <!--Descriptions/General-->
+    <!--Descriptions/General-->
 
 
     <string name="des_monster">A visual of the monster </string>
@@ -31,6 +31,7 @@
 
 
         <!--Statistics-->
+
 
     <string name="fire_lion_life">81</string>
     <string name="fire_lion_speed">192</string>
@@ -78,7 +79,7 @@
     <string name="tyrannoking_stamina">100</string>
 
 
-        <!--Names-->
+    <!--Names-->
 
     <string name="fire_lion_name">Fire Lion</string>
     <string name="genie_name">Genie</string>
@@ -90,12 +91,12 @@
     <string name="turtle_name">Turtle</string>
     <string name="tyrannoking_name">Tyrannoking</string>
 
-        <!--Levels-->
+    <!--Levels-->
     <string name="level_1">LVL 1-3</string>
     <string name="level_2">LVL 4-6</string>
     <string name="level_3">LVL 7-40</string>
 
-        <!--Informations-->
+    <!--Informations-->
 
     <string name="fire_lion_information">Possessing a mane of white-hot hell fire and more than just a sting in his tail – the Fire Lion is a creature of mythic awesomeness! The Fire Lion will make fast work of anyone foolish enough to challenge him.</string>
     <string name="genie_information">Formed from bright, hot-blue fire and able to travel great distances in the blink of an eye. Think twice before entering into any kind of agreement with these magical marvels.</string>
@@ -106,6 +107,29 @@
     <string name="thunder_eagle_information">The Bringer of Storms, a once-loyal servant to the Gods of Thunder, transformed into Thunder Eagle form after a terrible betrayal. This sparky creature offers the perfect mix of grace and danger.</string>
     <string name="turtle_information">Shy and unassuming, this tricky creature is master of the water realm and sharper than shattered glass. The Water Turtle may be slow on land, but he’s as dangerous as he is graceful in the ocean.</string>
     <string name="tyrannoking_information">Hail to the king baby! Self-proclaimed Kings of the Lizards, these dark creatures offer the perfect mix of danger, mystery and coolness to any island. Just don’t mention their short arms... these tyrants have got a bite!</string>
+
+
+    <!--Elements-->
+    <string name="fire_lion_element">Fire</string>
+    <string name="genie_element">Magic</string>
+    <string name="light_spirit_element">Light</string>
+    <string name="metalsaur_element">Metal</string>
+    <string name="panda_element">Nature</string>
+    <string name="rockilla_element">Earth</string>
+    <string name="thunder_eagle_element">Thunder</string>
+    <string name="turtle_element">Water</string>
+    <string name="tyrannoking_element">Dark</string>
+
+    <!--Antagonist elements-->
+    <string name="fire_lion_antagonist_element">Nature</string>
+    <string name="genie_antagonist_element">Metal</string>
+    <string name="light_spirit_antagonist_element">Dark</string>
+    <string name="metalsaur_antagonist_element">Light</string>
+    <string name="panda_antagonist_element">Magic</string>
+    <string name="rockilla_antagonist_element">Thunder</string>
+    <string name="thunder_eagle_antagonist_element">Water</string>
+    <string name="turtle_antagonist_element">Fire</string>
+    <string name="tyrannoking_antagonist_element">Earth</string>
 
 
 </resources>
