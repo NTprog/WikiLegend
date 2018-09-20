@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,9 +45,7 @@ public class MainActivity extends AppCompatActivity {
         settingButton(turtleButton, "turtle");
         settingButton(tyrannokingButton, "tyrannoking");
 
-        //ViewPager viewPager = findViewById(R.id.View_Pager_Menu);
 
-        //setViewPagerLink(viewPagerMenu, "fire_lion");
 
 
     }
@@ -105,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
     public void sliderBuilder(int indexEvolution, ViewPager viewPagerMenu) {
 
         //Initialazing Variable
-        ImageView habitat = findViewById(R.id.habitat);
+        ImageView habitat = findViewById(R.id.habitat_menu);
 
         //Setting habitat
         if (indexEvolution == 0) {

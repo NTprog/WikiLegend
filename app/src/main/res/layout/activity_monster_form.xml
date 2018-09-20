@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <!-- CENTRAL CIRCLE -->
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorBlue"
-        tools:context=".MonsterForm"
-        tools:layout_editor_absoluteY="81dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".MonsterForm"
+    tools:layout_editor_absoluteY="81dp">
 
 
-
-
-<View
+    <View
         android:id="@+id/myCircleView"
         android:layout_width="330dp"
         android:layout_height="330dp"
@@ -22,7 +19,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
-        android:background="@drawable/circle_shape"
+        android:background="@drawable/circle_fire_lion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -47,53 +44,33 @@
 
 
     <!--CENTRAL VISUAL-->
+
     <ImageView
         android:id="@+id/habitat"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginBottom="72dp"
+        app:layout_constraintBottom_toTopOf="@+id/monster_name"
         app:layout_constraintEnd_toEndOf="@+id/myCircleView"
         app:layout_constraintStart_toStartOf="@+id/myCircleView"
-        app:layout_constraintTop_toTopOf="@+id/myCircleView"
         app:srcCompat="@drawable/fire_lion_habitat"
         tools:ignore="ContentDescription" />
 
+
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
-        android:layout_width="230dp"
-        android:layout_height="230dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginRight="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="65dp"
+        android:layout_marginTop="32dp"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toTopOf="@+id/monster_level"
         app:layout_constraintEnd_toEndOf="@+id/habitat"
         app:layout_constraintStart_toStartOf="@+id/myCircleView"
-        app:layout_constraintTop_toBottomOf="@+id/logo">
+        app:layout_constraintTop_toTopOf="@+id/myCircleView">
 
     </android.support.v4.view.ViewPager>
-
-    <ImageButton
-        android:id="@+id/arrow_right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:contentDescription="@string/des_arrow_right"
-        app:layout_constraintBottom_toBottomOf="@+id/myCircleView"
-        app:layout_constraintEnd_toEndOf="@+id/myCircleView"
-        app:layout_constraintTop_toTopOf="@+id/myCircleView"
-        app:srcCompat="@drawable/ic_keyboard_arrow_right_black_24dp" />
-
-    <ImageButton
-        android:id="@+id/arrow_left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:contentDescription="@string/des_arrow_left"
-        app:layout_constraintBottom_toBottomOf="@+id/myCircleView"
-        app:layout_constraintStart_toStartOf="@+id/myCircleView"
-        app:layout_constraintTop_toTopOf="@+id/myCircleView"
-        app:srcCompat="@drawable/ic_keyboard_arrow_left_black_24dp" />
 
 
     <!--MONSTER GENERAL INFORMATIONS -->
@@ -102,24 +79,27 @@
         android:id="@+id/monster_name"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginBottom="130dp"
         android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
         android:text="@string/fire_lion_name"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monster_level" />
 
     <TextView
         android:id="@+id/monster_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:text="@string/level_1"
         android:textColor="@color/colorWhite"
         android:textSize="23sp"
-        app:layout_constraintStart_toEndOf="@+id/monster_name"
+        app:layout_constraintEnd_toEndOf="@+id/myCircleView"
+        app:layout_constraintStart_toStartOf="@+id/myCircleView"
         app:layout_constraintTop_toBottomOf="@+id/myCircleView" />
 
     <!--Container LIFE -->
@@ -339,5 +319,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/bte_fire_lion" />
 
+    <ImageView
+        android:id="@+id/popUpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/monster_name"
+        app:layout_constraintTop_toBottomOf="@+id/monster_level"
+        app:srcCompat="@drawable/ic_info_black_dp" />
+
 
 </android.support.constraint.ConstraintLayout>
+
+
