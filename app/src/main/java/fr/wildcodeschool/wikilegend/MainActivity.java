@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         Button metalsaurButton = findViewById(R.id.ButtonMetalsaur);
         Button genieButton = findViewById(R.id.ButtonGenie);
         Button tyrannokingButton = findViewById(R.id.ButtonTyrannoking);
+        Button randomButton = findViewById(R.id.randomButton);
 
         settingButton(fireButton, "fire_lion");
         settingButton(genieButton, "genie");
@@ -42,9 +44,69 @@ public class MainActivity extends AppCompatActivity {
         settingButton(turtleButton, "turtle");
         settingButton(tyrannokingButton, "tyrannoking");
 
+        settingRandomButton(randomButton);
+
         //SETTING TOP-SLIDER
         viewPagerMenu.setAdapter(imageAdapterMenu);
         onMainListenerSlider(viewPagerMenu);
+
+
+
+    }
+
+    public static int getRandomIntegerBetweenRange(double min, double max){
+        int x = (int) ((int)(Math.random()*((max-min)+1))+min);
+        return x;
+    }
+
+    public String caseSet(){
+        int rand = getRandomIntegerBetweenRange(1 , 9);
+        String monster = null;
+
+        switch(rand){
+            case 1 :
+                monster = "fire_lion";
+                break;
+            case 2 :
+                monster = "light_spirit";
+                break;
+            case 3 :
+                monster = "genie";
+                break;
+            case 4 :
+                monster = "panda";
+                break;
+            case 5 :
+                monster = "thunder_eagle";
+                break;
+            case 6 :
+                monster = "rockilla";
+                break;
+            case 7 :
+                monster = "metalsaur";
+                break;
+            case 8 :
+                monster = "turtle";
+                break;
+            case 9 :
+                monster = "tyrannoking";
+                break;
+
+        }
+        return monster;
+    }
+    public void settingRandomButton(Button button) {
+        button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MonsterForm.class);
+                intent.putExtra("monsterID", caseSet());
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+
+        });
 
     }
 
