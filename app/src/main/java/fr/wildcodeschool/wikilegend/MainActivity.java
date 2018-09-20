@@ -17,13 +17,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String monsterID = getIntent().getStringExtra("monsterID");
+        //INITIALIZATION VARIABLES
+
         viewPagerMenu = findViewById(R.id.View_Pager_Menu);
         ImageAdapterMenu imageAdapterMenu = new ImageAdapterMenu(this);
-        viewPagerMenu.setAdapter(imageAdapterMenu);
-        onMainListenerSlider(viewPagerMenu);
-
-        //Initialazing variables
 
         Button fireButton = findViewById(R.id.fireButton);
         Button lightSpiritButton = findViewById(R.id.ButtonLightSPirit);
@@ -45,12 +42,13 @@ public class MainActivity extends AppCompatActivity {
         settingButton(turtleButton, "turtle");
         settingButton(tyrannokingButton, "tyrannoking");
 
-
-
+        //SETTING TOP-SLIDER
+        viewPagerMenu.setAdapter(imageAdapterMenu);
+        onMainListenerSlider(viewPagerMenu);
 
     }
 
-
+    /*Setting a button wich open the MonsterForm Activity and send the "MonsterID" as extra.*/
     public void settingButton(Button button, final String monsterID) {
         button.setOnClickListener(new View.OnClickListener() {
 
@@ -66,7 +64,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //Add a Listener on the view Pager, in order to know when user change the "evolution-level-page"
+
+
+    /*Add a Listener on the view Pager, in order to know when user change the "evolution-level-page"*/
     public void onMainListenerSlider(final ViewPager viewPagerMenu) {
 
         viewPagerMenu.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -77,29 +77,30 @@ public class MainActivity extends AppCompatActivity {
             }
 
             public void onPageSelected(int position) {
-                sliderBuilder(position, viewPagerMenu);
+                habitatSwitcher(position, viewPagerMenu);
             }
         });
 
     }
 
+    /* Set a link in the top-slider, wich leads to MonsterForm Activity and send the monsterID as extra*/
     public void setViewPagerLink(ViewPager viewPagerMenu, final String monsterID) {
 
         viewPagerMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Toast.makeText(MainActivity.this, "ERROR EMPTY!", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(MainActivity.this, MonsterForm.class);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 intent.putExtra("monsterID", monsterID);
                 startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
 
             }
         });
     }
 
-    public void sliderBuilder(int indexEvolution, ViewPager viewPagerMenu) {
+    /* For each monster, change the habitat in the top-slider */
+    public void habitatSwitcher(int indexEvolution, ViewPager viewPagerMenu) {
 
         //Initialazing Variable
         ImageView habitat = findViewById(R.id.habitat_menu);

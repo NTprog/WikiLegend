@@ -112,7 +112,7 @@ public class ImageAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         ImageView monster = new ImageView(mContext);
-        monster.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        monster.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
         monster.setImageResource(mImageIds[position]);
         container.addView(monster, 0);
 

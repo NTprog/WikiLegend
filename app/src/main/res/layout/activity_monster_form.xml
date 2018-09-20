@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -45,68 +45,62 @@
 
     <!--CENTRAL VISUAL-->
 
+
+    <!--MONSTER GENERAL INFORMATIONS -->
+
     <ImageView
         android:id="@+id/habitat"
-        android:layout_width="match_parent"
-        android:layout_height="316dp"
-        android:layout_marginBottom="82dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="32dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/myCircleView"
+        app:layout_constraintBottom_toBottomOf="@+id/popUpButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/myCircleView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.556"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myCircleView"
         app:srcCompat="@drawable/fire_lion_habitat"
         tools:ignore="ContentDescription" />
 
-
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="191dp"
+        android:layout_width="wrap_content"
+        android:layout_height="244dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="8dp"
         android:scaleType="fitStart"
-        app:layout_constraintBottom_toTopOf="@+id/monster_level"
+        app:layout_constraintBottom_toTopOf="@+id/monster_name"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="@+id/habitat"
+        app:layout_constraintVertical_bias="0.0">
 
     </android.support.v4.view.ViewPager>
 
-
-
-
-    <!--MONSTER GENERAL INFORMATIONS -->
 
     <TextView
         android:id="@+id/monster_name"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
         android:text="@string/fire_lion_name"
         android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/monster_level" />
+        app:layout_constraintEnd_toEndOf="@+id/myCircleView"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/myCircleView"
+        app:layout_constraintTop_toBottomOf="@+id/myCircleView" />
 
     <TextView
         android:id="@+id/monster_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:text="@string/level_1"
         android:textColor="@color/colorWhite"
         android:textSize="23sp"
-        app:layout_constraintEnd_toEndOf="@+id/myCircleView"
-        app:layout_constraintStart_toStartOf="@+id/myCircleView"
-        app:layout_constraintTop_toBottomOf="@+id/myCircleView" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monster_name" />
 
     <!--Container LIFE -->
 
@@ -116,10 +110,10 @@
         android:layout_height="48dp"
         android:layout_marginLeft="24dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/rectangle_shape"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/monster_name" />
+        app:layout_constraintTop_toBottomOf="@+id/monster_level" />
 
     <ImageView
         android:id="@+id/picto_life"
@@ -139,8 +133,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textColor="@color/colorBackground"
         android:text="@string/text_life"
+        android:textColor="@color/colorBackground"
         app:layout_constraintBottom_toBottomOf="@+id/container_life"
         app:layout_constraintEnd_toEndOf="@+id/container_life"
         app:layout_constraintStart_toStartOf="@+id/container_life" />
@@ -150,10 +144,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
-        android:textColor="@color/colorBackground"
         android:layout_marginRight="24dp"
         android:layout_marginTop="8dp"
         android:text="@string/fire_lion_life"
+        android:textColor="@color/colorBackground"
         app:layout_constraintEnd_toEndOf="@+id/container_life"
         app:layout_constraintTop_toTopOf="@+id/container_life" />
 
@@ -166,10 +160,10 @@
         android:layout_height="48dp"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/rectangle_shape"
         app:layout_constraintStart_toEndOf="@+id/container_life"
-        app:layout_constraintTop_toBottomOf="@+id/monster_name" />
+        app:layout_constraintTop_toBottomOf="@+id/monster_level" />
 
     <ImageView
         android:id="@+id/picto_speed"
@@ -189,8 +183,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textColor="@color/colorBackground"
         android:text="@string/text_speed"
+        android:textColor="@color/colorBackground"
         app:layout_constraintBottom_toBottomOf="@+id/container_speed"
         app:layout_constraintEnd_toEndOf="@+id/container_speed"
         app:layout_constraintHorizontal_bias="1.0"
@@ -201,10 +195,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
-        android:textColor="@color/colorBackground"
         android:layout_marginRight="24dp"
         android:layout_marginTop="8dp"
         android:text="@string/fire_lion_speed"
+        android:textColor="@color/colorBackground"
         app:layout_constraintEnd_toEndOf="@+id/container_speed"
         app:layout_constraintTop_toTopOf="@+id/container_speed" />
 
@@ -215,10 +209,12 @@
         android:id="@+id/container_power"
         android:layout_width="100dp"
         android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginLeft="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rectangle_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_life" />
 
@@ -240,8 +236,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textColor="@color/colorBackground"
         android:text="@string/text_power"
+        android:textColor="@color/colorBackground"
         app:layout_constraintBottom_toBottomOf="@+id/container_power"
         app:layout_constraintEnd_toEndOf="@+id/container_power"
         app:layout_constraintHorizontal_bias="0.0"
@@ -251,11 +247,11 @@
         android:id="@+id/stat_power"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorBackground"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:layout_marginTop="8dp"
         android:text="@string/fire_lion_power"
+        android:textColor="@color/colorBackground"
         app:layout_constraintEnd_toEndOf="@+id/container_power"
         app:layout_constraintTop_toTopOf="@+id/container_power" />
 
@@ -266,10 +262,12 @@
         android:id="@+id/container_stamina"
         android:layout_width="100dp"
         android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rectangle_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/container_power"
         app:layout_constraintTop_toBottomOf="@+id/text_speed" />
 
@@ -291,8 +289,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textColor="@color/colorBackground"
         android:text="@string/text_stamina"
+        android:textColor="@color/colorBackground"
         app:layout_constraintBottom_toBottomOf="@+id/container_stamina"
         app:layout_constraintEnd_toEndOf="@+id/container_stamina"
         app:layout_constraintHorizontal_bias="0.0"
@@ -304,9 +302,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:textColor="@color/colorBackground"
         android:layout_marginTop="8dp"
         android:text="@string/fire_lion_stamina"
+        android:textColor="@color/colorBackground"
         app:layout_constraintEnd_toEndOf="@+id/container_stamina"
         app:layout_constraintTop_toTopOf="@+id/container_stamina" />
 
@@ -337,10 +335,13 @@
         android:id="@+id/popUpButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintStart_toEndOf="@+id/monster_name"
-        app:layout_constraintTop_toBottomOf="@+id/monster_level"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/monster_name"
+        app:layout_constraintStart_toStartOf="@+id/monster_name"
+        app:layout_constraintTop_toBottomOf="@+id/monster_name"
         app:srcCompat="@drawable/ic_info_black_dp" />
 
     <android.support.constraint.ConstraintLayout
@@ -408,6 +409,7 @@
             app:srcCompat="@drawable/circle_black" />
 
     </android.support.constraint.ConstraintLayout>
+
 </android.support.constraint.ConstraintLayout>
 
 
