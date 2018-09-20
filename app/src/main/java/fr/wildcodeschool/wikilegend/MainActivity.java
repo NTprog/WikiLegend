@@ -64,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
     /*Add a Listener on the view Pager, in order to know when user change the "evolution-level-page"*/
     public void onMainListenerSlider(final ViewPager viewPagerMenu) {
 
@@ -88,9 +90,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, MonsterForm.class);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 intent.putExtra("monsterID", monsterID);
                 startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
 
             }

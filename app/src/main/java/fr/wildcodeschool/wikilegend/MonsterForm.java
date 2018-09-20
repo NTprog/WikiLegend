@@ -4,6 +4,7 @@ package fr.wildcodeschool.wikilegend;
 
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
@@ -46,11 +47,25 @@ import android.widget.TextView;
         addListenerOnSlider(viewPager, monsterID);
 
 
-
+        ImageView logoRetour = findViewById(R.id.logo);
+        logoRetour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                backToMain();
+            }
+        });
     }
 
-    /*Set a ViewPager as a slider to witch between different evolutions of each monster*/
-    public void settingImageSlider(ViewPager viewPager, String monsterID) {
+        public void backToMain(){
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+        }
+
+
+        /*Set a ViewPager as a slider to witch between different evolutions of each monster*/
+
+        public void settingImageSlider(ViewPager viewPager, String monsterID) {
 
         ImageAdapter adapter = new ImageAdapter(this, monsterID);
         viewPager.setAdapter(adapter);
