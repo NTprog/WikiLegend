@@ -125,12 +125,6 @@ import android.widget.TextView;
         //Setting infodescription
 
 
-       /* popUpText.setText(MonsterForm.this.getResources().getIdentifier(
-                monsterID+"_information",
-                "string",
-                MonsterForm.this.getPackageName()));*/
-
-
 
         //Setting name
         name.setText(MonsterForm.this.getResources().getIdentifier(
