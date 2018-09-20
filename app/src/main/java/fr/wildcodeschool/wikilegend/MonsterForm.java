@@ -37,7 +37,7 @@ import android.widget.TextView;
         ViewPager viewPagerMenu = findViewById(R.id.View_Pager_Menu);
 
         View popUpPosition = findViewById(R.id.myCircleView);
-        TextView popUpButton = findViewById(R.id.pop_up);
+        ImageView popUpButton = findViewById(R.id.popUpButton);
 
         //Creating the page
         settingImageSlider(viewPager, monsterID);
@@ -208,7 +208,7 @@ import android.widget.TextView;
 
     }
 
-    public void settingPopUpWindow (final View popUpPosition, TextView popUpButton, final String monsterID) {
+    public void settingPopUpWindow (final View popUpPosition, ImageView popUpButton, final String monsterID) {
 
         popUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
