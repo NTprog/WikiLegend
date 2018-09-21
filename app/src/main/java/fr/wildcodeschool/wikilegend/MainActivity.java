@@ -54,11 +54,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    //SETTING RANDOM BUTTON ALGO
     public static int getRandomIntegerBetweenRange(double min, double max){
         int x = (int) ((int)(Math.random()*((max-min)+1))+min);
         return x;
     }
-
+    //SETTING CONDITION ON RAND BUTTON
     public String caseSet(){
         int rand = getRandomIntegerBetweenRange(1 , 9);
         String monster = null;
@@ -95,6 +97,8 @@ public class MainActivity extends AppCompatActivity {
         }
         return monster;
     }
+
+    //SETTING ON CLICK ACTION ON RAND BUTTON
     public void settingRandomButton(Button button) {
         button.setOnClickListener(new View.OnClickListener() {
 
