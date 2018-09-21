@@ -1,6 +1,5 @@
 package fr.wildcodeschool.wikilegend;
 
-
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v4.content.ContextCompat;
