@@ -66,7 +66,7 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="wrap_content"
-        android:layout_height="244dp"
+        android:layout_height="278dp"
         android:layout_gravity="center"
         android:scaleType="fitStart"
         app:layout_constraintBottom_toTopOf="@+id/monster_name"
@@ -348,7 +348,7 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="111dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
