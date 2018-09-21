@@ -51,50 +51,50 @@ public class MainActivity extends AppCompatActivity {
         onMainListenerSlider(viewPagerMenu);
 
 
-
     }
 
-    public static int getRandomIntegerBetweenRange(double min, double max){
-        int x = (int) ((int)(Math.random()*((max-min)+1))+min);
+    public static int getRandomIntegerBetweenRange(double min, double max) {
+        int x = (int) ((int) (Math.random() * ((max - min) + 1)) + min);
         return x;
     }
 
-    public String caseSet(){
-        int rand = getRandomIntegerBetweenRange(1 , 9);
+    public String caseSet() {
+        int rand = getRandomIntegerBetweenRange(1, 9);
         String monster = null;
 
-        switch(rand){
-            case 1 :
+        switch (rand) {
+            case 1:
                 monster = "fire_lion";
                 break;
-            case 2 :
+            case 2:
                 monster = "light_spirit";
                 break;
-            case 3 :
+            case 3:
                 monster = "genie";
                 break;
-            case 4 :
+            case 4:
                 monster = "panda";
                 break;
-            case 5 :
+            case 5:
                 monster = "thunder_eagle";
                 break;
-            case 6 :
+            case 6:
                 monster = "rockilla";
                 break;
-            case 7 :
+            case 7:
                 monster = "metalsaur";
                 break;
-            case 8 :
+            case 8:
                 monster = "turtle";
                 break;
-            case 9 :
+            case 9:
                 monster = "tyrannoking";
                 break;
 
         }
         return monster;
     }
+
     public void settingRandomButton(Button button) {
         button.setOnClickListener(new View.OnClickListener() {
 
@@ -125,8 +125,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-
 
     /*Add a Listener on the view Pager, in order to know when user change the "evolution-level-page"*/
     public void onMainListenerSlider(final ViewPager viewPagerMenu) {
